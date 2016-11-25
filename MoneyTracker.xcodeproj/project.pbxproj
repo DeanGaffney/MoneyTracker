@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E1F6ED2E1DE8BA510014BBA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED2D1DE8BA510014BBA5 /* AppDelegate.swift */; };
-		E1F6ED301DE8BA510014BBA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED2F1DE8BA510014BBA5 /* ViewController.swift */; };
 		E1F6ED331DE8BA510014BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED311DE8BA510014BBA5 /* Main.storyboard */; };
 		E1F6ED361DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED341DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld */; };
 		E1F6ED381DE8BA510014BBA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED371DE8BA510014BBA5 /* Assets.xcassets */; };
 		E1F6ED3B1DE8BA510014BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED391DE8BA510014BBA5 /* LaunchScreen.storyboard */; };
 		E1F6ED461DE8BA510014BBA5 /* MoneyTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED451DE8BA510014BBA5 /* MoneyTrackerTests.swift */; };
 		E1F6ED511DE8BA510014BBA5 /* MoneyTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED501DE8BA510014BBA5 /* MoneyTrackerUITests.swift */; };
+		E1F6ED5F1DE8C6C50014BBA5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED5E1DE8C6C50014BBA5 /* Item.swift */; };
+		E1F6ED611DE8C8870014BBA5 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED601DE8C8870014BBA5 /* Tracker.swift */; };
+		E1F6ED651DE8DD370014BBA5 /* TrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */; };
+		E1F6ED671DE8E5260014BBA5 /* TrackerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		E1F6ED2A1DE8BA510014BBA5 /* MoneyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F6ED2D1DE8BA510014BBA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1F6ED2F1DE8BA510014BBA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1F6ED321DE8BA510014BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1F6ED351DE8BA510014BBA5 /* MoneyTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyTracker.xcdatamodel; sourceTree = "<group>"; };
 		E1F6ED371DE8BA510014BBA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		E1F6ED4C1DE8BA510014BBA5 /* MoneyTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F6ED501DE8BA510014BBA5 /* MoneyTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTrackerUITests.swift; sourceTree = "<group>"; };
 		E1F6ED521DE8BA510014BBA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1F6ED5E1DE8C6C50014BBA5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E1F6ED601DE8C8870014BBA5 /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewCell.swift; sourceTree = "<group>"; };
+		E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				E1F6ED2D1DE8BA510014BBA5 /* AppDelegate.swift */,
-				E1F6ED2F1DE8BA510014BBA5 /* ViewController.swift */,
 				E1F6ED311DE8BA510014BBA5 /* Main.storyboard */,
 				E1F6ED371DE8BA510014BBA5 /* Assets.xcassets */,
 				E1F6ED391DE8BA510014BBA5 /* LaunchScreen.storyboard */,
 				E1F6ED3C1DE8BA510014BBA5 /* Info.plist */,
 				E1F6ED341DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld */,
+				E1F6ED5E1DE8C6C50014BBA5 /* Item.swift */,
+				E1F6ED601DE8C8870014BBA5 /* Tracker.swift */,
+				E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */,
+				E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */,
 			);
 			path = MoneyTracker;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1F6ED301DE8BA510014BBA5 /* ViewController.swift in Sources */,
+				E1F6ED671DE8E5260014BBA5 /* TrackerTableViewController.swift in Sources */,
+				E1F6ED651DE8DD370014BBA5 /* TrackerTableViewCell.swift in Sources */,
+				E1F6ED5F1DE8C6C50014BBA5 /* Item.swift in Sources */,
+				E1F6ED611DE8C8870014BBA5 /* Tracker.swift in Sources */,
 				E1F6ED361DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld in Sources */,
 				E1F6ED2E1DE8BA510014BBA5 /* AppDelegate.swift in Sources */,
 			);
