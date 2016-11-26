@@ -17,12 +17,12 @@ class ItemTableViewController: UITableViewController {
             items = seguedItems
         }
     }
-    let formatter = DateFormatter()
+    //let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        //formatter.dateStyle = .medium
+        //formatter.timeStyle = .none
         print(items)
         
     }
@@ -34,8 +34,19 @@ class ItemTableViewController: UITableViewController {
         self.navigationItem.setRightBarButtonItems([add,action], animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChartViewController"{
+            let viewController = segue.destination as! ChartViewController
+            viewController.items = items
+            print("Should have went to new segue")
+            
+        }
+    }
+
+    
     func graphButtonPressed(){
         print("Graph button pressed")
+        performSegue(withIdentifier: "ChartViewController", sender: self)
     }
     
     func addItemButtonPressed(){
@@ -69,8 +80,7 @@ class ItemTableViewController: UITableViewController {
         cell.itemNameLabel.text = item.getName()
         cell.itemCostLabel.text = String(format:"€%.2f",item.getCost())
         cell.itemCategoryLabel.text = item.getCategory().rawValue
-        cell.purchaseDateLabel.text = formatter.string(for: item.getPurchaseDate())
-        // Configure the cell...
+        cell.purchaseDateLabel.text = String(format: "%d/%d/%d",item.getPurchaseDay(),item.getPurchaseMonth(),item.getPurchaseYear())        // Configure the cell...
         
         return cell
     }
