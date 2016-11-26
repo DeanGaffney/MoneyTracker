@@ -8,12 +8,20 @@
 
 import UIKit
 
-class ItemViewController: UIViewController {
+class ItemViewController: UIViewController ,UITextFieldDelegate{
 
+    @IBOutlet weak var canelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var item: Item?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       //set up text field delegates
+        
+        //enable save button only if field is not empty
+        checkValidItemName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +29,35 @@ class ItemViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkValidItemName()
+        navigationItem.title = textField.text
+    }
+    
+    func checkValidItemName(){
+        // let text = nameTextField.text ?? ""
+        //saveButton.isEnabled = !text.isEmpty
+    }
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if (sender as! UIBarButtonItem === saveButton){
+            // initalise properties of the object
+            //item = Item(args got from fields by user)
+        }
     }
-    */
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+       
 
 }

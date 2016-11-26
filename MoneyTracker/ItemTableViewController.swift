@@ -52,6 +52,8 @@ class ItemTableViewController: UITableViewController {
     func addItemButtonPressed(){
         print("Clicked add item button")
         //perform a segue into a new view where user fills out details of the item
+        performSegue(withIdentifier: "ItemViewController", sender: self)
+        print("Made it to Add Item Controller") 
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,5 +95,16 @@ class ItemTableViewController: UITableViewController {
         
         items += [item1,item2,item3]
     }
+    
+    // MARK: Navigation
+    @IBAction func unwindToTrackerList(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? ItemViewController, let item = sourceViewController.item{
+            let newIndexPath = IndexPath(row: items.count, section: 0)
+            
+            items.append(item)
+            tableView.insertRows(at: [newIndexPath], with: .bottom)
+        }
+    }
+
 
 }

@@ -24,6 +24,18 @@
 		E1F6ED881DE92B6A0014BBA5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1F6ED7E1DE929C10014BBA5 /* Charts.framework */; };
 		E1F6ED891DE92B6A0014BBA5 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1F6ED7E1DE929C10014BBA5 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1F6ED8E1DE9D9C80014BBA5 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED8D1DE9D9C80014BBA5 /* ItemViewController.swift */; };
+		E1F6ED921DE9FECD0014BBA5 /* Money Tracker Pages-01.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED911DE9FECD0014BBA5 /* Money Tracker Pages-01.png */; };
+		E1F6ED941DE9FEDB0014BBA5 /* Add Button-01.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED931DE9FEDB0014BBA5 /* Add Button-01.png */; };
+		E1F6ED961DE9FEE50014BBA5 /* Money Tracker Pages-02.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED951DE9FEE50014BBA5 /* Money Tracker Pages-02.png */; };
+		E1F6ED981DE9FEED0014BBA5 /* Money Tracker Pages-03.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6ED971DE9FEED0014BBA5 /* Money Tracker Pages-03.png */; };
+		E1F6EDA91DE9FF4F0014BBA5 /* KlinicSlabBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA11DE9FF4F0014BBA5 /* KlinicSlabBold.otf */; };
+		E1F6EDAA1DE9FF4F0014BBA5 /* KlinicSlabBoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA21DE9FF4F0014BBA5 /* KlinicSlabBoldIt.otf */; };
+		E1F6EDAB1DE9FF4F0014BBA5 /* KlinicSlabBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA31DE9FF4F0014BBA5 /* KlinicSlabBook.otf */; };
+		E1F6EDAC1DE9FF4F0014BBA5 /* KlinicSlabBookIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA41DE9FF4F0014BBA5 /* KlinicSlabBookIt.otf */; };
+		E1F6EDAD1DE9FF4F0014BBA5 /* KlinicSlabLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA51DE9FF4F0014BBA5 /* KlinicSlabLight.otf */; };
+		E1F6EDAE1DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA61DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf */; };
+		E1F6EDAF1DE9FF4F0014BBA5 /* KlinicSlabMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA71DE9FF4F0014BBA5 /* KlinicSlabMedium.otf */; };
+		E1F6EDB01DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA81DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +120,18 @@
 		E1F6ED6C1DE929AE0014BBA5 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		E1F6ED841DE92A4D0014BBA5 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		E1F6ED8D1DE9D9C80014BBA5 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		E1F6ED911DE9FECD0014BBA5 /* Money Tracker Pages-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Tracker Pages-01.png"; sourceTree = "<group>"; };
+		E1F6ED931DE9FEDB0014BBA5 /* Add Button-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add Button-01.png"; sourceTree = "<group>"; };
+		E1F6ED951DE9FEE50014BBA5 /* Money Tracker Pages-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Tracker Pages-02.png"; sourceTree = "<group>"; };
+		E1F6ED971DE9FEED0014BBA5 /* Money Tracker Pages-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Tracker Pages-03.png"; sourceTree = "<group>"; };
+		E1F6EDA11DE9FF4F0014BBA5 /* KlinicSlabBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabBold.otf; sourceTree = "<group>"; };
+		E1F6EDA21DE9FF4F0014BBA5 /* KlinicSlabBoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabBoldIt.otf; sourceTree = "<group>"; };
+		E1F6EDA31DE9FF4F0014BBA5 /* KlinicSlabBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabBook.otf; sourceTree = "<group>"; };
+		E1F6EDA41DE9FF4F0014BBA5 /* KlinicSlabBookIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabBookIt.otf; sourceTree = "<group>"; };
+		E1F6EDA51DE9FF4F0014BBA5 /* KlinicSlabLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabLight.otf; sourceTree = "<group>"; };
+		E1F6EDA61DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabLightIt.otf; sourceTree = "<group>"; };
+		E1F6EDA71DE9FF4F0014BBA5 /* KlinicSlabMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabMedium.otf; sourceTree = "<group>"; };
+		E1F6EDA81DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabMediumIt.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +184,8 @@
 		E1F6ED2C1DE8BA510014BBA5 /* MoneyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E1F6ED901DE9FEA20014BBA5 /* Fonts */,
+				E1F6ED8F1DE9FE980014BBA5 /* Images */,
 				E1F6ED2D1DE8BA510014BBA5 /* AppDelegate.swift */,
 				E1F6ED311DE8BA510014BBA5 /* Main.storyboard */,
 				E1F6ED371DE8BA510014BBA5 /* Assets.xcassets */,
@@ -204,6 +230,32 @@
 				E1F6ED821DE929C10014BBA5 /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E1F6ED8F1DE9FE980014BBA5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6ED971DE9FEED0014BBA5 /* Money Tracker Pages-03.png */,
+				E1F6ED951DE9FEE50014BBA5 /* Money Tracker Pages-02.png */,
+				E1F6ED931DE9FEDB0014BBA5 /* Add Button-01.png */,
+				E1F6ED911DE9FECD0014BBA5 /* Money Tracker Pages-01.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E1F6ED901DE9FEA20014BBA5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E1F6EDA11DE9FF4F0014BBA5 /* KlinicSlabBold.otf */,
+				E1F6EDA21DE9FF4F0014BBA5 /* KlinicSlabBoldIt.otf */,
+				E1F6EDA31DE9FF4F0014BBA5 /* KlinicSlabBook.otf */,
+				E1F6EDA41DE9FF4F0014BBA5 /* KlinicSlabBookIt.otf */,
+				E1F6EDA51DE9FF4F0014BBA5 /* KlinicSlabLight.otf */,
+				E1F6EDA61DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf */,
+				E1F6EDA71DE9FF4F0014BBA5 /* KlinicSlabMedium.otf */,
+				E1F6EDA81DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +398,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F6ED3B1DE8BA510014BBA5 /* LaunchScreen.storyboard in Resources */,
+				E1F6EDB01DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf in Resources */,
+				E1F6EDAA1DE9FF4F0014BBA5 /* KlinicSlabBoldIt.otf in Resources */,
+				E1F6EDAB1DE9FF4F0014BBA5 /* KlinicSlabBook.otf in Resources */,
 				E1F6ED381DE8BA510014BBA5 /* Assets.xcassets in Resources */,
+				E1F6ED961DE9FEE50014BBA5 /* Money Tracker Pages-02.png in Resources */,
+				E1F6EDAE1DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf in Resources */,
 				E1F6ED331DE8BA510014BBA5 /* Main.storyboard in Resources */,
+				E1F6EDAD1DE9FF4F0014BBA5 /* KlinicSlabLight.otf in Resources */,
+				E1F6EDAF1DE9FF4F0014BBA5 /* KlinicSlabMedium.otf in Resources */,
+				E1F6ED981DE9FEED0014BBA5 /* Money Tracker Pages-03.png in Resources */,
+				E1F6ED941DE9FEDB0014BBA5 /* Add Button-01.png in Resources */,
+				E1F6EDAC1DE9FF4F0014BBA5 /* KlinicSlabBookIt.otf in Resources */,
+				E1F6EDA91DE9FF4F0014BBA5 /* KlinicSlabBold.otf in Resources */,
+				E1F6ED921DE9FECD0014BBA5 /* Money Tracker Pages-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
