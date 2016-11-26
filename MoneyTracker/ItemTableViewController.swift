@@ -27,7 +27,20 @@ class ItemTableViewController: UITableViewController {
         
     }
     
+    //add navbar items for adding new item and graph action
     override func viewWillAppear(_ animated: Bool) {
+        let add = UIBarButtonItem(barButtonSystemItem: .add,target: self,action: #selector(ItemTableViewController.addItemButtonPressed))
+        let action = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(ItemTableViewController.graphButtonPressed))
+        self.navigationItem.setRightBarButtonItems([add,action], animated: true)
+    }
+    
+    func graphButtonPressed(){
+        print("Graph button pressed")
+    }
+    
+    func addItemButtonPressed(){
+        print("Clicked add item button")
+        //perform a segue into a new view where user fills out details of the item
     }
 
     override func didReceiveMemoryWarning() {
