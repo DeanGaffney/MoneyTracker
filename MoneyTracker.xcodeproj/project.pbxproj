@@ -18,6 +18,8 @@
 		E1F6ED611DE8C8870014BBA5 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED601DE8C8870014BBA5 /* Tracker.swift */; };
 		E1F6ED651DE8DD370014BBA5 /* TrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */; };
 		E1F6ED671DE8E5260014BBA5 /* TrackerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */; };
+		E1F6ED691DE901D90014BBA5 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED681DE901D90014BBA5 /* ItemTableViewController.swift */; };
+		E1F6ED6B1DE901F10014BBA5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6ED6A1DE901F10014BBA5 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E1F6ED601DE8C8870014BBA5 /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewCell.swift; sourceTree = "<group>"; };
 		E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewController.swift; sourceTree = "<group>"; };
+		E1F6ED681DE901D90014BBA5 /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		E1F6ED6A1DE901F10014BBA5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				E1F6ED601DE8C8870014BBA5 /* Tracker.swift */,
 				E1F6ED641DE8DD370014BBA5 /* TrackerTableViewCell.swift */,
 				E1F6ED661DE8E5260014BBA5 /* TrackerTableViewController.swift */,
+				E1F6ED681DE901D90014BBA5 /* ItemTableViewController.swift */,
+				E1F6ED6A1DE901F10014BBA5 /* ItemTableViewCell.swift */,
 			);
 			path = MoneyTracker;
 			sourceTree = "<group>";
@@ -275,8 +281,10 @@
 				E1F6ED651DE8DD370014BBA5 /* TrackerTableViewCell.swift in Sources */,
 				E1F6ED5F1DE8C6C50014BBA5 /* Item.swift in Sources */,
 				E1F6ED611DE8C8870014BBA5 /* Tracker.swift in Sources */,
+				E1F6ED6B1DE901F10014BBA5 /* ItemTableViewCell.swift in Sources */,
 				E1F6ED361DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld in Sources */,
 				E1F6ED2E1DE8BA510014BBA5 /* AppDelegate.swift in Sources */,
+				E1F6ED691DE901D90014BBA5 /* ItemTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

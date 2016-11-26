@@ -9,6 +9,7 @@
 import UIKit
 
 class TrackerTableViewController: UITableViewController {
+    var selectedTrackerItems = [Item]()
     
     @IBAction func addTracker(_ sender: Any) {
         let alert = UIAlertController(title: "New name",message:  "Enter a name for your tracker",preferredStyle: .alert)
@@ -37,7 +38,7 @@ class TrackerTableViewController: UITableViewController {
     var trackers = [Tracker]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.delegate = self
         //load sample tracker data
         loadSampleTrackers()
     }
@@ -71,6 +72,20 @@ class TrackerTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTrackerItems = trackers[indexPath.row].items
+        print(selectedTrackerItems)
+        super.performSegue(withIdentifier: "ItemTableViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemTableViewController"{
+            let viewController = segue.destination as! ItemTableViewController
+            viewController.items = selectedTrackerItems
+            print("Should have went to new segue")
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -134,8 +149,10 @@ class TrackerTableViewController: UITableViewController {
         
         
         let tracker2 = Tracker(name: "MONEY2")
+        tracker2.items.append(Item(name: "Cheese", cost: 2.50, type: Item.Category.DRINK))
+        tracker2.items.append(Item(name: "Dinner", cost: 5.50, type: Item.Category.FOOD))
         let tracker3 = Tracker(name: "MONEY3")
         trackers += [tracker1,tracker2,tracker3]
     }
-
+    
 }

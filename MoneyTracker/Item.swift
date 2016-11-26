@@ -9,12 +9,12 @@
 import Foundation
 
 class Item {
-   public enum Category {
-        case FOOD
-        case DRINK
-        case CAR
-        case BILL
-        case MISC
+    public enum Category : String{
+        case FOOD = "Food"
+        case DRINK = "Drink"
+        case CAR = "Car"
+        case BILL = "Bill"
+        case MISC = "Misc"
     }
     
     var type: Category          //type of item purchased
@@ -27,5 +27,21 @@ class Item {
         self.cost = cost
         self.type = type
         self.purchaseDate = Date()
+    }
+    
+    public func getCost()->Double{
+        return self.cost
+    }
+    
+    public func getPurchaseDate()->Date{
+        return self.purchaseDate
+    }
+    
+    public func getCategory()->Category{
+        return self.type
+    }
+    
+    public func getName()->String{
+        return self.name
     }
 }
