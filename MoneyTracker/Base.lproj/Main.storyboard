@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -71,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4h-nB-OIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4522.3999999999996" y="772.26386806596713"/>
+            <point key="canvasLocation" x="4452" y="732"/>
         </scene>
         <!--Items-->
         <scene sceneID="Edp-pf-7UV">
@@ -80,7 +81,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gh5-e5-EPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.84313725490196079" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="90" id="keV-lL-qYC" customClass="ItemTableViewCell" customModule="MoneyTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
@@ -92,38 +93,40 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Qh-sAe">
                                             <rect key="frame" x="8" y="11" width="166" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-bS-11c">
                                             <rect key="frame" x="204" y="11" width="154" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-TU-37Z">
                                             <rect key="frame" x="8" y="53" width="166" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-gs-QqL">
                                             <rect key="frame" x="204" y="53" width="154" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.84313725490196079" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="itemCategoryLabel" destination="TMX-TU-37Z" id="YFd-Z1-6ic"/>
                                     <outlet property="itemCostLabel" destination="uGS-bS-11c" id="EGW-Rk-mOX"/>
                                     <outlet property="itemNameLabel" destination="eB8-Qh-sAe" id="Y4u-3t-PiZ"/>
                                     <outlet property="purchaseDateLabel" destination="zyd-gs-QqL" id="CZZ-Cv-l58"/>
+                                    <segue destination="Zpn-at-Wgp" kind="show" identifier="showDetail" id="QgC-DO-c9u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -139,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvA-e6-gnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5452" y="771.36431784107947"/>
+            <point key="canvasLocation" x="5401" y="732"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="Bbg-b8-Bbf">
@@ -152,7 +155,67 @@
                     <view key="view" contentMode="scaleToFill" id="0nE-LB-OOt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-tR-dC8">
+                                <rect key="frame" x="16" y="195" width="343" height="293"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-ZA-qym">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Item...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVQ-3O-zso">
+                                        <rect key="frame" x="0.0" y="32" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j39-m7-Rzz">
+                                        <rect key="frame" x="0.0" y="77" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food,Drink,Bills,Car...etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnt-Oh-WTw">
+                                        <rect key="frame" x="0.0" y="109" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-3D-8XB">
+                                        <rect key="frame" x="0.0" y="154" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost of item..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-KE-1Gr">
+                                        <rect key="frame" x="0.0" y="186" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiJ-ew-vJD">
+                                        <rect key="frame" x="0.0" y="231" width="343" height="17"/>
+                                        <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-Ua-BJx">
+                                        <rect key="frame" x="0.0" y="263" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WX2-8B-lHR" firstAttribute="top" secondItem="NHp-tR-dC8" secondAttribute="bottom" constant="179" id="9se-FW-Lwb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NHp-tR-dC8" secondAttribute="trailing" id="BM6-rM-TxT"/>
+                            <constraint firstItem="NHp-tR-dC8" firstAttribute="leading" secondItem="0nE-LB-OOt" secondAttribute="leadingMargin" id="JRH-PT-0UM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h4T-fl-XBO">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="u83-py-d5E">
@@ -168,13 +231,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="canelButton" destination="u83-py-d5E" id="ZAG-8O-6uO"/>
+                        <outlet property="categoryTextField" destination="Fnt-Oh-WTw" id="XY6-s7-GGU"/>
+                        <outlet property="costTextField" destination="Ztf-KE-1Gr" id="7Kw-Ny-Vc7"/>
+                        <outlet property="dateTextField" destination="gUI-Ua-BJx" id="e30-cH-Mfm"/>
+                        <outlet property="nameTextField" destination="hVQ-3O-zso" id="QAD-Ib-vRF"/>
                         <outlet property="saveButton" destination="yuV-su-07U" id="Pt1-Tw-aqf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOO-DS-Sbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YDK-2c-bFq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7292" y="407.94602698650675"/>
+            <point key="canvasLocation" x="7292" y="407.0464767616192"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="Dbh-AF-Kni">
@@ -188,13 +255,19 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyO-9g-5un" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="67" y="237" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyO-9g-5un" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="237" width="375" height="366"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="SyO-9g-5un" secondAttribute="trailing" constant="-16" id="FhR-Ez-dAB"/>
+                            <constraint firstItem="SyO-9g-5un" firstAttribute="bottom" secondItem="ymK-gC-ASu" secondAttribute="top" id="G2X-rU-jSX"/>
+                            <constraint firstItem="SyO-9g-5un" firstAttribute="top" secondItem="fBc-sd-VtM" secondAttribute="bottom" constant="237" id="Rxv-J2-nTt"/>
+                            <constraint firstItem="SyO-9g-5un" firstAttribute="centerX" secondItem="9wN-fr-4Am" secondAttribute="centerX" id="Z2W-pF-fyG"/>
+                            <constraint firstItem="SyO-9g-5un" firstAttribute="leading" secondItem="9wN-fr-4Am" secondAttribute="leadingMargin" constant="-16" id="m1Z-gs-GwL"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
@@ -203,12 +276,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U24-30-D8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6353" y="1262"/>
+            <point key="canvasLocation" x="6352.8000000000002" y="1261.6191904047978"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="oP8-jN-Y4e">
             <objects>
-                <viewController id="RpA-53-6ZI" sceneMemberID="viewController">
+                <viewController id="RpA-53-6ZI" customClass="HomeViewController" customModule="MoneyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y4D-H9-EHF"/>
                         <viewControllerLayoutGuide type="bottom" id="jfX-Rc-0h8"/>
@@ -244,7 +317,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Eg-P6-iHc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="itj-Kq-1d6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="itj-Kq-1d6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -262,7 +335,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sdv-9S-uHA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h5H-xn-btw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h5H-xn-btw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -276,4 +349,7 @@
             <point key="canvasLocation" x="6352.8000000000002" y="407.94602698650675"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QgC-DO-c9u"/>
+    </inferredMetricsTieBreakers>
 </document>

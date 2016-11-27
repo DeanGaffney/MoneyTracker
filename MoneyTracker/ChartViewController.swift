@@ -10,7 +10,15 @@ import UIKit
 import Charts
 
 class ChartViewController: UIViewController {
+    var backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+    weak var axisFormatDelegate: IAxisValueFormatter?
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Graph"
+        backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "moneytracker-02",ofType: ".png")!)
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+
     
     @IBOutlet weak var barChartView: BarChartView!
     var months  = [String]()
@@ -60,14 +68,26 @@ class ChartViewController: UIViewController {
             dataEntries.append(chartEntry)
         }
         
-        let barChartDataSet = BarChartDataSet(values: dataEntries, label: "Items Purchased")
+        let barChartDataSet = BarChartDataSet(values: dataEntries, label: "")
+        barChartDataSet.stackLabels = months
+        barChartDataSet.colors = [UIColor(red: 227/255, green:29/255 , blue: 47/255, alpha: 1)]
+        barChartDataSet.valueColors = [UIColor.white]
+        barChartDataSet.barBorderColor = UIColor.white
+        barChartDataSet.valueTextColor = UIColor.white
+       
+        barChartView.chartDescription?.text = ""
+        barChartView.xAxis.labelTextColor = UIColor.white
+        barChartView.xAxis.gridColor = UIColor.white
+        barChartView.xAxis.axisLineColor = UIColor.white
+        barChartView.leftAxis.labelTextColor = UIColor.white
+        barChartView.rightAxis.labelTextColor = UIColor.white
         let chartData = BarChartData(dataSet: barChartDataSet)
         barChartView.data = chartData
-        
+        barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easing: ChartEasingOption.easeInBounce as? ChartEasingFunctionBlock)
         
     }
-
-    /*
+    
+       /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

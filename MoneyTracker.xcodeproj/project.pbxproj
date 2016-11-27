@@ -36,6 +36,8 @@
 		E1F6EDAE1DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA61DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf */; };
 		E1F6EDAF1DE9FF4F0014BBA5 /* KlinicSlabMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA71DE9FF4F0014BBA5 /* KlinicSlabMedium.otf */; };
 		E1F6EDB01DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDA81DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf */; };
+		E1F6EDB21DEA01C50014BBA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6EDB11DEA01C50014BBA5 /* HomeViewController.swift */; };
+		E1F6EDB41DEB53080014BBA5 /* moneytracker-02.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EDB31DEB53080014BBA5 /* moneytracker-02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		E1F6EDA61DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabLightIt.otf; sourceTree = "<group>"; };
 		E1F6EDA71DE9FF4F0014BBA5 /* KlinicSlabMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabMedium.otf; sourceTree = "<group>"; };
 		E1F6EDA81DE9FF4F0014BBA5 /* KlinicSlabMediumIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KlinicSlabMediumIt.otf; sourceTree = "<group>"; };
+		E1F6EDB11DEA01C50014BBA5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1F6EDB31DEB53080014BBA5 /* moneytracker-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moneytracker-02.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 				E1F6ED6A1DE901F10014BBA5 /* ItemTableViewCell.swift */,
 				E1F6ED841DE92A4D0014BBA5 /* ChartViewController.swift */,
 				E1F6ED8D1DE9D9C80014BBA5 /* ItemViewController.swift */,
+				E1F6EDB11DEA01C50014BBA5 /* HomeViewController.swift */,
 			);
 			path = MoneyTracker;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 		E1F6ED8F1DE9FE980014BBA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E1F6EDB31DEB53080014BBA5 /* moneytracker-02.png */,
 				E1F6ED971DE9FEED0014BBA5 /* Money Tracker Pages-03.png */,
 				E1F6ED951DE9FEE50014BBA5 /* Money Tracker Pages-02.png */,
 				E1F6ED931DE9FEDB0014BBA5 /* Add Button-01.png */,
@@ -406,6 +412,7 @@
 				E1F6EDAE1DE9FF4F0014BBA5 /* KlinicSlabLightIt.otf in Resources */,
 				E1F6ED331DE8BA510014BBA5 /* Main.storyboard in Resources */,
 				E1F6EDAD1DE9FF4F0014BBA5 /* KlinicSlabLight.otf in Resources */,
+				E1F6EDB41DEB53080014BBA5 /* moneytracker-02.png in Resources */,
 				E1F6EDAF1DE9FF4F0014BBA5 /* KlinicSlabMedium.otf in Resources */,
 				E1F6ED981DE9FEED0014BBA5 /* Money Tracker Pages-03.png in Resources */,
 				E1F6ED941DE9FEDB0014BBA5 /* Add Button-01.png in Resources */,
@@ -443,6 +450,7 @@
 				E1F6ED6B1DE901F10014BBA5 /* ItemTableViewCell.swift in Sources */,
 				E1F6ED851DE92A4D0014BBA5 /* ChartViewController.swift in Sources */,
 				E1F6ED361DE8BA510014BBA5 /* MoneyTracker.xcdatamodeld in Sources */,
+				E1F6EDB21DEA01C50014BBA5 /* HomeViewController.swift in Sources */,
 				E1F6ED8E1DE9D9C80014BBA5 /* ItemViewController.swift in Sources */,
 				E1F6ED2E1DE8BA510014BBA5 /* AppDelegate.swift in Sources */,
 				E1F6ED691DE901D90014BBA5 /* ItemTableViewController.swift in Sources */,

@@ -21,25 +21,27 @@ class ItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //formatter.dateStyle = .medium
-        //formatter.timeStyle = .none
-        print(items)
-        
     }
     
     //add navbar items for adding new item and graph action
     override func viewWillAppear(_ animated: Bool) {
         let add = UIBarButtonItem(barButtonSystemItem: .add,target: self,action: #selector(ItemTableViewController.addItemButtonPressed))
         let action = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(ItemTableViewController.graphButtonPressed))
-        self.navigationItem.setRightBarButtonItems([add,action], animated: true)
+        self.navigationItem.setRightBarButtonItems([add,action,editButtonItem], animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChartViewController"{
             let viewController = segue.destination as! ChartViewController
             viewController.items = items
-            print("Should have went to new segue")
-            
+            print("Should have went to chart view controller")
+        }else if segue.identifier == "showDetail"{
+            let itemViewController = segue.destination as! ItemViewController
+            if let selectedCell = sender as? ItemTableViewCell{
+                let indexPath = tableView.indexPath(for: selectedCell)
+                let selectedItem = items[(indexPath?.row)!]
+                itemViewController.item = selectedItem
+            }
         }
     }
 
@@ -86,6 +88,18 @@ class ItemTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            //delete row from data source
+            items.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
  
     //load some sample items for testing
     func loadSampleItems(){
@@ -99,10 +113,18 @@ class ItemTableViewController: UITableViewController {
     // MARK: Navigation
     @IBAction func unwindToTrackerList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? ItemViewController, let item = sourceViewController.item{
-            let newIndexPath = IndexPath(row: items.count, section: 0)
             
-            items.append(item)
-            tableView.insertRows(at: [newIndexPath], with: .bottom)
+            //update item
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                items[selectedIndexPath.row] = item
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }else{
+            //add a new item
+                let newIndexPath = IndexPath(row: items.count, section: 0)
+            
+                items.append(item)
+                tableView.insertRows(at: [newIndexPath], with: .bottom)
+            }
         }
     }
 
