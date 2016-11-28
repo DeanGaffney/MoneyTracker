@@ -65,7 +65,7 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
         let dateComponents = formattedDate.components(separatedBy: "/")
         print(dateComponents)
         dateTextField.text =
-            String(format: "%d/%d/%d",dateComponents[1],dateComponents[0],dateComponents[2])
+            "\(dateComponents[1])/\(dateComponents[0])/\(dateComponents[2])"
         //enable save button only if field is not empty
         saveButton.isEnabled = (isAllFieldsFilled()) ? true : false
 
@@ -83,6 +83,11 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         navigationItem.title = nameTextField.text
         saveButton.isEnabled = (isAllFieldsFilled()) ? true : false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     //checks if all fields are filled in
