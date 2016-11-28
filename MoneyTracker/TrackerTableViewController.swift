@@ -19,6 +19,7 @@ class TrackerTableViewController: UITableViewController {
         self.tableView.delegate = self
         
         self.trackers = CoreDataController.retrieveTrackers()
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +78,7 @@ class TrackerTableViewController: UITableViewController {
         
         let tracker = trackers[indexPath.row]
         cell.nameLabel.text = tracker.name
-        cell.totalLabel.text = String(format:"€%.2f",5.0)
+        cell.totalLabel.text = String(format:"€%.2f",CoreDataController.totalCost(tracker: tracker))
         // Configure the cell...
 
         return cell
@@ -108,7 +109,6 @@ class TrackerTableViewController: UITableViewController {
             CoreDataController.getContext().delete(tracker)
             CoreDataController.saveContext()
         }
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

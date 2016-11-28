@@ -63,7 +63,7 @@ class CoreDataController{
         }
     }
     
-    class func createNewItem(name:String,cost: Double,purchaseDate: Date,category:Int32,owningTracker: Tracker)->Item{
+    class func createNewItem(name:String,cost: Double,purchaseDate: Date,category:String,owningTracker: Tracker)->Item{
         let item: Item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: CoreDataController.getContext()) as! Item
         item.name = name
         item.cost = cost
@@ -112,5 +112,14 @@ class CoreDataController{
         tracker.date = creationDate as NSDate?
         
         return tracker
+    }
+    
+    //get cost of all items in tracker
+    class func totalCost(tracker: Tracker)->Double{
+        var result: Double = 0
+        for item in tracker.items!{
+            result += (item as! Item).cost
+        }
+        return result
     }
 }

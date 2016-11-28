@@ -93,7 +93,7 @@ class ItemTableViewController: UITableViewController {
         let item = items[indexPath.row]
         cell.itemNameLabel.text = item.name
         cell.itemCostLabel.text = String(format:"€%.2f",item.cost)
-        cell.itemCategoryLabel.text = String(format: "%d",item.category)
+        cell.itemCategoryLabel.text = String(item.category!)
         cell.purchaseDateLabel.text = String(format: "%d/%d/%d",item.purchaseDay,item.purchaseMonth,item.purchaseYear)        // Configure the cell...
         
         return cell
