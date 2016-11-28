@@ -63,17 +63,54 @@ class CoreDataController{
         }
     }
     
+    class func createNewItem(name:String,cost: Double,purchaseDate: Date,category:Int32,owningTracker: Tracker)->Item{
+        let item: Item = NSEntityDescription.insertNewObject(forEntityName: "Item", into: CoreDataController.getContext()) as! Item
+        item.name = name
+        item.cost = cost
+        item.category = category
+        item.purchaseDate = purchaseDate as NSDate?
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .short
+        let dateString = formatter.string(from: purchaseDate)
+        let dateComponenets = dateString.components(separatedBy: "/")
+        item.purchaseDay = Int32(dateComponenets[1])!
+        item.purchaseMonth = Int32(dateComponenets[0])!
+        item.purchaseYear = Int32(dateComponenets[2])!
+        item.tracker = owningTracker
+        return item
+    }
+    
     //retuns all products in database
-    class func retrieveProducts() ->[Product]{
-        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-        let results = CoreDataController.getContext().fetch(fetchRequest) as! [Product]
-        if let fetchedResults = results{
-            print("Items retrieved succesfully")
-        }else{
-            print("Could not retrieve Items")
+    class func retrieveProducts() ->[Item]{
+        var results = [Item]()
+        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            results = try CoreDataController.getContext().fetch(fetchRequest) 
+        } catch  {
+            print("Error: \(error)")
         }
-        return results!
+        return results
     }
     
     //return all trackers from database
+    class func retrieveTrackers()->[Tracker]{
+        var results = [Tracker]()
+        let fetchRequest: NSFetchRequest<Tracker> = Tracker.fetchRequest()
+        do {
+            results = try CoreDataController.getContext().fetch(fetchRequest) 
+        } catch  {
+            print("Error: \(error)")
+        }
+        return results
+    }
+    
+    //create new tracker to be stored
+    class func createNewTracker(name: String, creationDate: Date) ->Tracker{
+        let tracker: Tracker = NSEntityDescription.insertNewObject(forEntityName: "Tracker", into: CoreDataController.getContext()) as! Tracker
+        tracker.name = name
+        tracker.date = creationDate as NSDate?
+        
+        return tracker
+    }
 }

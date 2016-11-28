@@ -18,6 +18,7 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
     @IBOutlet weak var dateTextField: UITextField!
     
     var item: Item?
+    var tracker: Tracker?
     
     var backgroundImage = UIImageView(frame: UIScreen.main.bounds)
     
@@ -43,9 +44,15 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
         if let item = item{
             navigationItem.title = item.name
             nameTextField.text = item.name
-            categoryTextField.text = item.getCategory().rawValue
+            categoryTextField.text = String(format:"%d",item.category)
             costTextField.text = String(format: "%.2f",item.cost)
-            dateTextField.text = String(format: "%d/%d/%d", item.getPurchaseDay(),item.getPurchaseMonth(),item.getPurchaseYear())
+            dateTextField.text = String(format: "%d/%d/%d", item.purchaseDay,item.purchaseMonth,item.purchaseYear)
+        }
+        
+        var seguedTracker = tracker{
+            didSet{
+                tracker = seguedTracker
+            }
         }
         //set up date text field automatically
         let formatter = DateFormatter()
@@ -93,14 +100,14 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
             // initalise properties of the object
             let name = nameTextField.text ?? ""
             let cost = costTextField.text ?? "0.0"
-            let category = convertCategory(value: categoryTextField.text!)
-            item = Item(name: name, cost: Double(cost)!, type: category,purchaseDate: Date())
-            //item = Item(args got from fields by user)
+           // let category = convertCategory(value: categoryTextField.text!)
+            let category = 1
+            item = CoreDataController.createNewItem(name: name, cost: Double(cost)!, purchaseDate: Date(),category: Int32(category),owningTracker: tracker!)
         }
     }
     
     //gets item category from textview and converst to Item Category enum
-    func convertCategory(value: String)->Item.Category{
+   /* func convertCategory(value: String)->Item.Category{
         if(value.lowercased() == "food"){
             return Item.Category.FOOD
         }else if(value.lowercased() == "car"){
@@ -111,7 +118,7 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
             return Item.Category.CAR
         }
         return Item.Category.MISC
-    }
+    }*/
     
     //on cancel button pressed
     @IBAction func cancel(_ sender: UIBarButtonItem) {

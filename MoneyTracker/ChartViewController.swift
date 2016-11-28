@@ -52,7 +52,7 @@ class ChartViewController: UIViewController {
     func setUpMonthlyDictionary(){
         for i in 0..<items.count{
             //get month string and add to dictionary
-            monthlyValues[months[items[i].getPurchaseMonth()-1]] = monthlyValues[months[items[i].getPurchaseMonth() - 1]]! + items[i].getCost()
+            monthlyValues[months[items[i].purchaseMonth-1]] = monthlyValues[months[items[i].purchaseMonth - 1]]! + items[i].cost
         }
         
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class ItemTableViewController: UITableViewController {
     
+    var tracker: Tracker?
     //items from selected tracker to display
     var items = [Item]()
     var seguedItems = [Item](){
@@ -17,19 +18,13 @@ class ItemTableViewController: UITableViewController {
             items = seguedItems
         }
     }
-    //let formatter = DateFormatter()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let savedItems = loadItems(){
-            print("Tried getting saved items on view load")
-            items += savedItems
-            
-        }else{
-            print("Loaded sample items")
-            loadSampleItems()
-        }
+               print("Loaded sample items")
+      print("Tracker in ItemViewController  \(tracker?.name)")
     }
     
     //add navbar items for adding new item and graph action
@@ -50,7 +45,13 @@ class ItemTableViewController: UITableViewController {
                 let indexPath = tableView.indexPath(for: selectedCell)
                 let selectedItem = items[(indexPath?.row)!]
                 itemViewController.item = selectedItem
+                itemViewController.tracker = tracker
             }
+        }else if segue.identifier == "ItemViewController"{
+            let navViewController = segue.destination as! UINavigationController
+            let addViewController = navViewController.topViewController as! ItemViewController
+            addViewController.tracker = tracker
+            print("Segued to item view controller to add item")
         }
     }
 
@@ -90,10 +91,10 @@ class ItemTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemTableViewCell
         
         let item = items[indexPath.row]
-        cell.itemNameLabel.text = item.getName()
-        cell.itemCostLabel.text = String(format:"€%.2f",item.getCost())
-        cell.itemCategoryLabel.text = item.getCategory().rawValue
-        cell.purchaseDateLabel.text = String(format: "%d/%d/%d",item.getPurchaseDay(),item.getPurchaseMonth(),item.getPurchaseYear())        // Configure the cell...
+        cell.itemNameLabel.text = item.name
+        cell.itemCostLabel.text = String(format:"€%.2f",item.cost)
+        cell.itemCategoryLabel.text = String(format: "%d",item.category)
+        cell.purchaseDateLabel.text = String(format: "%d/%d/%d",item.purchaseDay,item.purchaseMonth,item.purchaseYear)        // Configure the cell...
         
         return cell
     }
@@ -101,11 +102,13 @@ class ItemTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             //delete row from data source
+            //delete item from owning tracker
+            let item = items[indexPath.row]
+            item.tracker?.removeFromItems(item)
             items.remove(at: indexPath.row)
-            print("Made it to save when deleting")
-            saveItems()
-            print("Made it past save when deleting...")
+          
             tableView.deleteRows(at: [indexPath], with: .fade)
+            CoreDataController.saveContext()
         }
        
     }
@@ -113,47 +116,26 @@ class ItemTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
- 
-    //load some sample items for testing
-    func loadSampleItems(){
-        let item1 = Item(name: "Coffee", cost: 2.25, type: Item.Category.DRINK, purchaseDate: Date())
-        let item2 = Item(name: "Burger", cost: 3.15, type: Item.Category.FOOD, purchaseDate: Date())
-        let item3 = Item(name: "Petrol", cost: 20.10, type: Item.Category.CAR, purchaseDate: Date())
-        
-        items.append(item1!)
-        items.append(item2!)
-        items.append(item3!)
-    }
-    
+
     // MARK: Navigation
     @IBAction func unwindToTrackerList(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? ItemViewController, let item = sourceViewController.item{
             
             //update item
             if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                tracker?.removeFromItems(items[selectedIndexPath.row])
                 items[selectedIndexPath.row] = item
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }else{
-            //add a new item
+            //add a new item and add the item to the trackers list of items
                 let newIndexPath = IndexPath(row: items.count, section: 0)
-            
                 items.append(item)
+                tracker?.addToItems(item)
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
             //save items
             print("In unwind made it to save")
-            saveItems()
+            CoreDataController.saveContext()
         }
     }
-    
-    func saveItems(){
-        NSKeyedArchiver.archiveRootObject(items, toFile: Item.ArchiveURL.path)
-    }
-    
-    func loadItems()->[Item]?{
-        print("In load items.......")
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
-    }
-
-
 }

@@ -1,5 +1,5 @@
 //
-//  Tracker.swift
+//  Tracker+CoreDataClass.swift
 //  MoneyTracker
 //
 //  Created by Dean Gaffney on 28/11/2016.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import CoreData
+
+@objc(Tracker)
+public class Tracker: NSManagedObject {
+
+}

@@ -11,7 +11,20 @@ import CoreData
 
 class TrackerTableViewController: UITableViewController {
     var selectedTrackerItems = [Item]()
+    var trackers = [Tracker]()
+    var selectedTracker: Tracker?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.delegate = self
+        
+        self.trackers = CoreDataController.retrieveTrackers()
+    }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     @IBAction func addTracker(_ sender: Any) {
         let alert = UIAlertController(title: "New name",message:  "Enter a name for your tracker",preferredStyle: .alert)
         
@@ -22,8 +35,9 @@ class TrackerTableViewController: UITableViewController {
                     return
             }
             //create new tracker with user input name
-            self.trackers.append(Tracker(name: trackerName,creationDate: Date()))
+            self.trackers.append(CoreDataController.createNewTracker(name: trackerName,creationDate: Date()))
             self.tableView.reloadData()
+            CoreDataController.saveContext()
             print("Added new tracker and reloaded table")
         }
         
@@ -36,19 +50,7 @@ class TrackerTableViewController: UITableViewController {
       
     }
     
-    var trackers = [Tracker]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.delegate = self
-        //load sample tracker data
-        loadSampleTrackers()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+   
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,14 +69,20 @@ class TrackerTableViewController: UITableViewController {
         
         let tracker = trackers[indexPath.row]
         cell.nameLabel.text = tracker.name
-        cell.totalLabel.text = String(format:"€%.2f",tracker.getTotal())
+        cell.totalLabel.text = String(format:"€%.2f",5.0)
         // Configure the cell...
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedTrackerItems = trackers[indexPath.row].items
+        selectedTrackerItems = trackers[indexPath.row].items?.allObjects as! [Item]
+        selectedTracker = trackers[indexPath.row]
+        //set owning tracker for items
+        for item in selectedTrackerItems{
+            item.tracker = selectedTracker
+        }
+        //may need to set items tracker here
         print(selectedTrackerItems)
         super.performSegue(withIdentifier: "ItemTableViewController", sender: self)
     }
@@ -82,7 +90,8 @@ class TrackerTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ItemTableViewController"{
             let viewController = segue.destination as! ItemTableViewController
-            viewController.items = selectedTrackerItems
+            viewController.items = selectedTracker?.items?.allObjects as! [Item]
+            viewController.tracker = selectedTracker
             print("Should have went to new segue")
             
         }
@@ -133,7 +142,7 @@ class TrackerTableViewController: UITableViewController {
     }
     */
     
-    func loadSampleTrackers(){
+    /*func loadSampleTrackers(){
         let tracker1 = Tracker(name : "MONEY",creationDate:Date())
         tracker1.items.append(Item(name: "Coffee", cost: 2.50, type: Item.Category.DRINK,purchaseDate: Date())!)
         tracker1.items.append(Item(name: "Breakfast", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
@@ -154,6 +163,12 @@ class TrackerTableViewController: UITableViewController {
         tracker2.items.append(Item(name: "Dinner", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
         let tracker3 = Tracker(name: "MONEY3",creationDate: Date())
         trackers += [tracker1,tracker2,tracker3]
+    }*/
+    
+    func loadSampleTrackers(){
+        let tracker1 = CoreDataController.createNewTracker(name: "MONEY", creationDate: Date())
+        let tracker2 = CoreDataController.createNewTracker(name: "MONEY2", creationDate: Date())
+        trackers += [tracker1,tracker2]
     }
     
 }
