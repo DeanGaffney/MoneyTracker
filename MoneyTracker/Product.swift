@@ -1,5 +1,5 @@
 //
-//  Tracker.swift
+//  Product.swift
 //  MoneyTracker
 //
 //  Created by Dean Gaffney on 28/11/2016.
