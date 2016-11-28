@@ -14,6 +14,9 @@
         <array key="KlinicSlabBold.otf">
             <string>KlinicSlab-Bold</string>
         </array>
+        <array key="KlinicSlabBoldIt.otf">
+            <string>KlinicSlab-BoldItalic</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Tracker-->
@@ -29,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STE-nu-iSy" id="hB7-7y-hvU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-6v-h2j">
@@ -88,7 +91,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="keV-lL-qYC" id="Nad-Ws-fQS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Qh-sAe">
@@ -309,20 +312,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoI-Ml-ECp">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoI-Ml-ECp">
+                                <rect key="frame" x="137" y="345" width="100" height="120"/>
+                                <state key="normal" image="HomeButton.png"/>
                                 <connections>
                                     <segue destination="ktc-U7-smF" kind="show" id="Sby-eB-njX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Get Tracking!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-te-aHv">
+                                <rect key="frame" x="87" y="514" width="200" height="40"/>
+                                <fontDescription key="fontDescription" name="KlinicSlab-BoldItalic" family="Klinic Slab" pointSize="32"/>
+                                <color key="textColor" red="0.16470588235294117" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerY" secondItem="NDu-PV-YRH" secondAttribute="centerY" id="HLO-Ly-9LR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iZn-te-aHv" secondAttribute="trailing" constant="72" id="27U-gB-yd8"/>
+                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerY" secondItem="NDu-PV-YRH" secondAttribute="centerY" constant="71.5" id="HLO-Ly-9LR"/>
                             <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerX" secondItem="NDu-PV-YRH" secondAttribute="centerX" id="IxF-1U-DBI"/>
-                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="254" id="Nc9-YM-u6M"/>
-                            <constraint firstItem="jfX-Rc-0h8" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="319" id="rdN-JU-0r0"/>
+                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="281" id="Nc9-YM-u6M"/>
+                            <constraint firstItem="iZn-te-aHv" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="49" id="dMl-0B-OQB"/>
+                            <constraint firstItem="jfX-Rc-0h8" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="202" id="rdN-JU-0r0"/>
+                            <constraint firstItem="iZn-te-aHv" firstAttribute="leading" secondItem="NDu-PV-YRH" secondAttribute="leadingMargin" constant="71" id="wbv-1X-9fV"/>
+                            <constraint firstItem="iZn-te-aHv" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="450" id="yFK-aG-8cW"/>
+                            <constraint firstItem="iZn-te-aHv" firstAttribute="centerX" secondItem="NDu-PV-YRH" secondAttribute="centerX" id="zJt-5Z-SeZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdD-eR-ut6"/>
@@ -368,6 +382,9 @@
             <point key="canvasLocation" x="6352.8000000000002" y="407.94602698650675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HomeButton.png" width="100" height="111"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QgC-DO-c9u"/>
     </inferredMetricsTieBreakers>
