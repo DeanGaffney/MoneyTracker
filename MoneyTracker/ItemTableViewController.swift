@@ -21,6 +21,15 @@ class ItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let savedItems = loadItems(){
+            print("Tried getting saved items on view load")
+            items += savedItems
+            
+        }else{
+            print("Loaded sample items")
+            loadSampleItems()
+        }
     }
     
     //add navbar items for adding new item and graph action
@@ -93,8 +102,12 @@ class ItemTableViewController: UITableViewController {
         if editingStyle == .delete{
             //delete row from data source
             items.remove(at: indexPath.row)
+            print("Made it to save when deleting")
+            saveItems()
+            print("Made it past save when deleting...")
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+       
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,11 +116,13 @@ class ItemTableViewController: UITableViewController {
  
     //load some sample items for testing
     func loadSampleItems(){
-        let item1 = Item(name: "Coffee", cost: 2.25, type: Item.Category.DRINK)
-        let item2 = Item(name: "Burger", cost: 3.15, type: Item.Category.FOOD)
-        let item3 = Item(name: "Petrol", cost: 20.10, type: Item.Category.CAR)
+        let item1 = Item(name: "Coffee", cost: 2.25, type: Item.Category.DRINK, purchaseDate: Date())
+        let item2 = Item(name: "Burger", cost: 3.15, type: Item.Category.FOOD, purchaseDate: Date())
+        let item3 = Item(name: "Petrol", cost: 20.10, type: Item.Category.CAR, purchaseDate: Date())
         
-        items += [item1,item2,item3]
+        items.append(item1!)
+        items.append(item2!)
+        items.append(item3!)
     }
     
     // MARK: Navigation
@@ -125,7 +140,19 @@ class ItemTableViewController: UITableViewController {
                 items.append(item)
                 tableView.insertRows(at: [newIndexPath], with: .bottom)
             }
+            //save items
+            print("In unwind made it to save")
+            saveItems()
         }
+    }
+    
+    func saveItems(){
+        NSKeyedArchiver.archiveRootObject(items, toFile: Item.ArchiveURL.path)
+    }
+    
+    func loadItems()->[Item]?{
+        print("In load items.......")
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Item.ArchiveURL.path) as? [Item]
     }
 
 

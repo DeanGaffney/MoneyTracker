@@ -12,9 +12,9 @@ class Tracker {
     var items = [Item]()
     var name: String        //name of tracker
     var creationDate: Date          //date tracker was created by user
-    init(name: String) {
+    init(name: String, creationDate: Date) {
         self.name = name
-        self.creationDate = Date()
+        self.creationDate = creationDate
     }
     
     // MARK: Modifiers

@@ -94,7 +94,7 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
             let name = nameTextField.text ?? ""
             let cost = costTextField.text ?? "0.0"
             let category = convertCategory(value: categoryTextField.text!)
-            item = Item(name: name, cost: Double(cost)!, type: category)
+            item = Item(name: name, cost: Double(cost)!, type: category,purchaseDate: Date())
             //item = Item(args got from fields by user)
         }
     }

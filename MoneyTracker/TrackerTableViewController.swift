@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TrackerTableViewController: UITableViewController {
     var selectedTrackerItems = [Item]()
@@ -21,7 +22,7 @@ class TrackerTableViewController: UITableViewController {
                     return
             }
             //create new tracker with user input name
-            self.trackers.append(Tracker(name: trackerName))
+            self.trackers.append(Tracker(name: trackerName,creationDate: Date()))
             self.tableView.reloadData()
             print("Added new tracker and reloaded table")
         }
@@ -35,7 +36,7 @@ class TrackerTableViewController: UITableViewController {
       
     }
     
-    var trackers = [Tracker]()
+    var trackers = [NSManagedObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -133,9 +134,9 @@ class TrackerTableViewController: UITableViewController {
     */
     
     func loadSampleTrackers(){
-        let tracker1 = Tracker(name : "MONEY")
-        tracker1.items.append(Item(name: "Coffee", cost: 2.50, type: Item.Category.DRINK))
-        tracker1.items.append(Item(name: "Breakfast", cost: 5.50, type: Item.Category.FOOD))
+        let tracker1 = Tracker(name : "MONEY",creationDate:Date())
+        tracker1.items.append(Item(name: "Coffee", cost: 2.50, type: Item.Category.DRINK,purchaseDate: Date())!)
+        tracker1.items.append(Item(name: "Breakfast", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
         print(tracker1.getTotal())
         print(tracker1.creationDate)
         let formatter = DateFormatter()
@@ -148,10 +149,10 @@ class TrackerTableViewController: UITableViewController {
         }
         
         
-        let tracker2 = Tracker(name: "MONEY2")
-        tracker2.items.append(Item(name: "Cheese", cost: 2.50, type: Item.Category.DRINK))
-        tracker2.items.append(Item(name: "Dinner", cost: 5.50, type: Item.Category.FOOD))
-        let tracker3 = Tracker(name: "MONEY3")
+        let tracker2 = Tracker(name: "MONEY2",creationDate: Date())
+        tracker2.items.append(Item(name: "Cheese", cost: 2.50, type: Item.Category.DRINK, purchaseDate: Date())!)
+        tracker2.items.append(Item(name: "Dinner", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
+        let tracker3 = Tracker(name: "MONEY3",creationDate: Date())
         trackers += [tracker1,tracker2,tracker3]
     }
     
