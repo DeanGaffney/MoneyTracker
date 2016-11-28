@@ -36,7 +36,7 @@ class TrackerTableViewController: UITableViewController {
       
     }
     
-    var trackers = [NSManagedObject]()
+    var trackers = [Tracker]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
