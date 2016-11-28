@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STE-nu-iSy" id="hB7-7y-hvU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-6v-h2j">
@@ -87,38 +88,56 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="keV-lL-qYC" id="Nad-Ws-fQS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Qh-sAe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Qh-sAe">
                                             <rect key="frame" x="8" y="11" width="166" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Dse-s4-NZV"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-bS-11c">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-bS-11c">
                                             <rect key="frame" x="204" y="11" width="154" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="154" id="yIc-hy-Sik"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-TU-37Z">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-TU-37Z">
                                             <rect key="frame" x="8" y="53" width="166" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-gs-QqL">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-gs-QqL">
                                             <rect key="frame" x="204" y="53" width="154" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="baseline" secondItem="zyd-gs-QqL" secondAttribute="baseline" id="CBZ-Zp-vW2"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="leading" secondItem="Nad-Ws-fQS" secondAttribute="leadingMargin" id="F69-uu-9xa"/>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="top" secondItem="eB8-Qh-sAe" secondAttribute="bottom" constant="21" id="J1W-vu-hGO"/>
+                                        <constraint firstItem="uGS-bS-11c" firstAttribute="leading" secondItem="eB8-Qh-sAe" secondAttribute="trailing" constant="30" id="L1g-Vp-MXY"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="firstBaseline" secondItem="uGS-bS-11c" secondAttribute="firstBaseline" id="Wx6-7g-e2h"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="trailing" secondItem="TMX-TU-37Z" secondAttribute="trailing" id="ZKm-BA-jxR"/>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="firstBaseline" secondItem="zyd-gs-QqL" secondAttribute="firstBaseline" id="a2u-Qw-dme"/>
+                                        <constraint firstItem="uGS-bS-11c" firstAttribute="leading" secondItem="zyd-gs-QqL" secondAttribute="leading" id="bl0-5A-EsT"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="baseline" secondItem="uGS-bS-11c" secondAttribute="baseline" id="c0B-n3-sWy"/>
+                                        <constraint firstItem="uGS-bS-11c" firstAttribute="trailing" secondItem="zyd-gs-QqL" secondAttribute="trailing" id="cYZ-Jj-9qa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uGS-bS-11c" secondAttribute="trailing" constant="9" id="lOY-we-ZcQ"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="leading" secondItem="TMX-TU-37Z" secondAttribute="leading" id="prn-V7-qo3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TMX-TU-37Z" secondAttribute="bottom" constant="7.5" id="rMw-dJ-RQK"/>
+                                        <constraint firstItem="eB8-Qh-sAe" firstAttribute="top" secondItem="Nad-Ws-fQS" secondAttribute="topMargin" constant="3" id="xYY-Xx-g8U"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.87058823529411766" green="0.84313725490196079" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>

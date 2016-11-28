@@ -25,6 +25,9 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Home"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 42/255, green:48/255 , blue: 56/255, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "KlinicSlab-Bold",size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "Money Tracker Pages-01",ofType: ".png")!)
         self.view.insertSubview(backgroundImage, at: 0)
     }

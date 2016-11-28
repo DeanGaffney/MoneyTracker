@@ -24,10 +24,12 @@ class ItemViewController: UIViewController ,UITextFieldDelegate{
     
         
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = "Home"
+        self.navigationItem.title = "Add Item"
         backgroundImage.image = UIImage(named: Bundle.main.path(forResource: "moneytracker-02",ofType: ".png")!)
         self.view.insertSubview(backgroundImage, at: 0)
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 42/255, green:48/255 , blue: 56/255, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "KlinicSlab-Bold",size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         
     }
 

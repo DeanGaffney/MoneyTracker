@@ -13,6 +13,7 @@ class TrackerTableViewController: UITableViewController {
     var selectedTrackerItems = [Item]()
     var trackers = [Tracker]()
     var selectedTracker: Tracker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -24,6 +25,13 @@ class TrackerTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //add navbar items for adding new item and graph action
+    override func viewWillAppear(_ animated: Bool) {
+        let add = UIBarButtonItem(barButtonSystemItem: .add,target: self,action: #selector(TrackerTableViewController.addTracker))
+        self.navigationItem.setRightBarButtonItems([add,editButtonItem], animated: true)
+    }
+
 
     @IBAction func addTracker(_ sender: Any) {
         let alert = UIAlertController(title: "New name",message:  "Enter a name for your tracker",preferredStyle: .alert)
@@ -87,6 +95,22 @@ class TrackerTableViewController: UITableViewController {
         super.performSegue(withIdentifier: "ItemTableViewController", sender: self)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            //delete row from data source
+            //delete item from owning tracker
+            let tracker = trackers[indexPath.row]
+            tracker.removeFromItems(tracker.items!)
+            trackers.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            //delete object from core data and save
+            CoreDataController.getContext().delete(tracker)
+            CoreDataController.saveContext()
+        }
+        
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ItemTableViewController"{
             let viewController = segue.destination as! ItemTableViewController
@@ -97,73 +121,6 @@ class TrackerTableViewController: UITableViewController {
         }
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    /*func loadSampleTrackers(){
-        let tracker1 = Tracker(name : "MONEY",creationDate:Date())
-        tracker1.items.append(Item(name: "Coffee", cost: 2.50, type: Item.Category.DRINK,purchaseDate: Date())!)
-        tracker1.items.append(Item(name: "Breakfast", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
-        print(tracker1.getTotal())
-        print(tracker1.creationDate)
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateStyle = .medium
-        print("Formatted Date is \(formatter.string(from: tracker1.creationDate))")
-        for item in tracker1.items{
-            print(item.purchaseDate)
-
-        }
-        
-        
-        let tracker2 = Tracker(name: "MONEY2",creationDate: Date())
-        tracker2.items.append(Item(name: "Cheese", cost: 2.50, type: Item.Category.DRINK, purchaseDate: Date())!)
-        tracker2.items.append(Item(name: "Dinner", cost: 5.50, type: Item.Category.FOOD,purchaseDate: Date())!)
-        let tracker3 = Tracker(name: "MONEY3",creationDate: Date())
-        trackers += [tracker1,tracker2,tracker3]
-    }*/
     
     func loadSampleTrackers(){
         let tracker1 = CoreDataController.createNewTracker(name: "MONEY", creationDate: Date())
