@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Eg-P6-iHc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Eg-P6-iHc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,24 +25,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.87058823529411766" green="0.84313725490196079" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackerTableViewCell" id="STE-nu-iSy" customClass="TrackerTableViewCell" customModule="MoneyTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackerTableViewCell" rowHeight="44" id="STE-nu-iSy" customClass="TrackerTableViewCell" customModule="MoneyTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STE-nu-iSy" id="hB7-7y-hvU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-6v-h2j">
-                                            <rect key="frame" x="8" y="14" width="194" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYD-6v-h2j">
+                                            <frame key="frameInset" minX="8" minY="14" width="194" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-0m-rU7">
-                                            <rect key="frame" x="224" y="14" width="143" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-0m-rU7">
+                                            <frame key="frameInset" minX="224" minY="14" width="143" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -88,57 +85,53 @@
                         <color key="backgroundColor" red="0.87058823529411766" green="0.84313725490196079" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="90" id="keV-lL-qYC" customClass="ItemTableViewCell" customModule="MoneyTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="keV-lL-qYC" id="Nad-Ws-fQS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <frame key="frameInset" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Qh-sAe">
-                                            <rect key="frame" x="8" y="11" width="166" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Dse-s4-NZV"/>
+                                                <constraint firstAttribute="height" constant="25" id="Dse-s4-NZV"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGS-bS-11c">
-                                            <rect key="frame" x="204" y="11" width="154" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="154" id="yIc-hy-Sik"/>
+                                                <constraint firstAttribute="width" constant="100" id="yIc-hy-Sik"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-TU-37Z">
-                                            <rect key="frame" x="8" y="53" width="166" height="21"/>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyd-gs-QqL">
-                                            <rect key="frame" x="204" y="53" width="154" height="21"/>
-                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="baseline" secondItem="zyd-gs-QqL" secondAttribute="baseline" id="CBZ-Zp-vW2"/>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="baseline" secondItem="zyd-gs-QqL" secondAttribute="baseline" constant="4" id="CBZ-Zp-vW2"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="leading" secondItem="Nad-Ws-fQS" secondAttribute="leadingMargin" id="F69-uu-9xa"/>
-                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="top" secondItem="eB8-Qh-sAe" secondAttribute="bottom" constant="21" id="J1W-vu-hGO"/>
-                                        <constraint firstItem="uGS-bS-11c" firstAttribute="leading" secondItem="eB8-Qh-sAe" secondAttribute="trailing" constant="30" id="L1g-Vp-MXY"/>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="top" secondItem="eB8-Qh-sAe" secondAttribute="bottom" constant="17" id="J1W-vu-hGO"/>
+                                        <constraint firstItem="uGS-bS-11c" firstAttribute="leading" secondItem="eB8-Qh-sAe" secondAttribute="trailing" constant="84" id="L1g-Vp-MXY"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="firstBaseline" secondItem="uGS-bS-11c" secondAttribute="firstBaseline" id="Wx6-7g-e2h"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="trailing" secondItem="TMX-TU-37Z" secondAttribute="trailing" id="ZKm-BA-jxR"/>
-                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="firstBaseline" secondItem="zyd-gs-QqL" secondAttribute="firstBaseline" id="a2u-Qw-dme"/>
+                                        <constraint firstItem="TMX-TU-37Z" firstAttribute="firstBaseline" secondItem="zyd-gs-QqL" secondAttribute="firstBaseline" constant="4" id="a2u-Qw-dme"/>
                                         <constraint firstItem="uGS-bS-11c" firstAttribute="leading" secondItem="zyd-gs-QqL" secondAttribute="leading" id="bl0-5A-EsT"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="baseline" secondItem="uGS-bS-11c" secondAttribute="baseline" id="c0B-n3-sWy"/>
                                         <constraint firstItem="uGS-bS-11c" firstAttribute="trailing" secondItem="zyd-gs-QqL" secondAttribute="trailing" id="cYZ-Jj-9qa"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uGS-bS-11c" secondAttribute="trailing" constant="9" id="lOY-we-ZcQ"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="leading" secondItem="TMX-TU-37Z" secondAttribute="leading" id="prn-V7-qo3"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="TMX-TU-37Z" secondAttribute="bottom" constant="7.5" id="rMw-dJ-RQK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TMX-TU-37Z" secondAttribute="bottom" constant="3.5" id="rMw-dJ-RQK"/>
                                         <constraint firstItem="eB8-Qh-sAe" firstAttribute="top" secondItem="Nad-Ws-fQS" secondAttribute="topMargin" constant="3" id="xYY-Xx-g8U"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -164,7 +157,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvA-e6-gnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5401" y="732"/>
+            <point key="canvasLocation" x="5400.8000000000002" y="731.78410794602701"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="Bbg-b8-Bbf">
@@ -179,52 +172,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NHp-tR-dC8">
-                                <rect key="frame" x="16" y="195" width="343" height="293"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-ZA-qym">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
                                         <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Item...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVQ-3O-zso">
-                                        <rect key="frame" x="0.0" y="32" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j39-m7-Rzz">
-                                        <rect key="frame" x="0.0" y="77" width="343" height="17"/>
                                         <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Food,Drink,Bills,Car...etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnt-Oh-WTw">
-                                        <rect key="frame" x="0.0" y="109" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-3D-8XB">
-                                        <rect key="frame" x="0.0" y="154" width="343" height="17"/>
                                         <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cost of item..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-KE-1Gr">
-                                        <rect key="frame" x="0.0" y="186" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiJ-ew-vJD">
-                                        <rect key="frame" x="0.0" y="231" width="343" height="17"/>
                                         <fontDescription key="fontDescription" name="KlinicSlab-Bold" family="Klinic Slab" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUI-Ua-BJx">
-                                        <rect key="frame" x="0.0" y="263" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -278,7 +262,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyO-9g-5un" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="237" width="375" height="366"/>
                                 <color key="backgroundColor" red="0.16470588235294117" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -312,28 +295,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Tracking!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-te-aHv">
+                                <fontDescription key="fontDescription" name="KlinicSlab-BoldItalic" family="Klinic Slab" pointSize="32"/>
+                                <color key="textColor" red="0.16470588235294117" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoI-Ml-ECp">
-                                <rect key="frame" x="137" y="345" width="100" height="120"/>
                                 <state key="normal" image="HomeButton.png"/>
                                 <connections>
                                     <segue destination="ktc-U7-smF" kind="show" id="Sby-eB-njX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Get Tracking!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-te-aHv">
-                                <rect key="frame" x="87" y="514" width="200" height="40"/>
-                                <fontDescription key="fontDescription" name="KlinicSlab-BoldItalic" family="Klinic Slab" pointSize="32"/>
-                                <color key="textColor" red="0.16470588235294117" green="0.18823529411764706" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="iZn-te-aHv" secondAttribute="trailing" constant="72" id="27U-gB-yd8"/>
-                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerY" secondItem="NDu-PV-YRH" secondAttribute="centerY" constant="71.5" id="HLO-Ly-9LR"/>
-                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerX" secondItem="NDu-PV-YRH" secondAttribute="centerX" id="IxF-1U-DBI"/>
-                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="281" id="Nc9-YM-u6M"/>
-                            <constraint firstItem="iZn-te-aHv" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="49" id="dMl-0B-OQB"/>
-                            <constraint firstItem="jfX-Rc-0h8" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="202" id="rdN-JU-0r0"/>
+                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerY" secondItem="NDu-PV-YRH" secondAttribute="centerY" constant="76.5" id="HLO-Ly-9LR"/>
+                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="centerX" secondItem="NDu-PV-YRH" secondAttribute="centerX" constant="-0.5" id="IxF-1U-DBI"/>
+                            <constraint firstItem="RoI-Ml-ECp" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="296" id="Nc9-YM-u6M"/>
+                            <constraint firstItem="iZn-te-aHv" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="54" id="dMl-0B-OQB"/>
+                            <constraint firstItem="jfX-Rc-0h8" firstAttribute="top" secondItem="RoI-Ml-ECp" secondAttribute="bottom" constant="207" id="rdN-JU-0r0"/>
                             <constraint firstItem="iZn-te-aHv" firstAttribute="leading" secondItem="NDu-PV-YRH" secondAttribute="leadingMargin" constant="71" id="wbv-1X-9fV"/>
                             <constraint firstItem="iZn-te-aHv" firstAttribute="top" secondItem="Y4D-H9-EHF" secondAttribute="bottom" constant="450" id="yFK-aG-8cW"/>
                             <constraint firstItem="iZn-te-aHv" firstAttribute="centerX" secondItem="NDu-PV-YRH" secondAttribute="centerX" id="zJt-5Z-SeZ"/>
@@ -350,7 +331,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Eg-P6-iHc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="itj-Kq-1d6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="itj-Kq-1d6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -368,7 +349,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sdv-9S-uHA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h5H-xn-btw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h5H-xn-btw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
